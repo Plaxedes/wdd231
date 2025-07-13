@@ -99,7 +99,12 @@ footer {
     text-align: center;
     padding: 1em 0;
 }
-
+.social-icon {
+    width: 24px; 
+    height: 24px;
+    margin: 0 5px; 
+    vertical-align: middle; 
+}
 @media (max-width: 600px) {
     .nav-links {
         display: none;
