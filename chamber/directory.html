@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ndebele Chamber of Commerce Directory</title>
+    <link rel="stylesheet" href="styles/normalize.css">
+    <link rel="stylesheet" href="styles/styles.css">
+</head>
+<body>
+    <header>
+        <h1>Ndebele Chamber of Commerce</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="directory.html">Directory</a></li>
+                <li><a href="discover.html">Discover</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <h2>Member Directory</h2>
+        <button id="toggle-view">Toggle View</button>
+        <div id="member-list" class="member-list"></div>
+    </main>
+
+    <footer>
+        <p>Ndebele Chamber of Commerce</p>
+        <p>10 Due Rd. P.O. Box 1</p>
+        <p>Ndebele, MA 999</p>
+        <p>Phone: (223) 555-3200</p>
+        <p id="last-modified"></p>
+        <p>&copy; <span id="current-year"></span> WDD 231 Class Project<br>Plaxedes Ncube</p>
+    </footer>
+
+    <script>
+        async function fetchMembers() {
+            const response = await fetch('data/members.json');
+            const members = await response.json();
+            displayMembers(members);
+        }
+
+        function displayMembers(members) {
+            const memberList = document.getElementById('member-list');
+            memberList.innerHTML = ''; 
+            members.forEach(member => {
+                const card = document.createElement('div');
+                card.className = 'member-card';
+                card.innerHTML = `
+                    <img src="images/${member.images[0]}" alt="${member.name}" />
+                    <h3>${member.name}</h3>
+                    <p>${member.address}</p>
+                    <p>Phone: ${member.phone}</p>
+                    <p><a href="${member.website}" target="_blank">Visit Website</a></p>
+                    <p>${member.description}</p>
+                `;
+                memberList.appendChild(card);
+            });
+        }
+
+        document.getElementById('toggle-view').addEventListener('click', () => {
+            const memberList = document.getElementById('member-list');
+            memberList.classList.toggle('list-view');
+        });
+
+        document.addEventListener("DOMContentLoaded", function() {
+            const lastModified = new Date(document.lastModified);
+            document.getElementById("last-modified").textContent = `Last Modification Date: ${lastModified.toLocaleDateString()}`;
+            document.getElementById("current-year").textContent = new Date().getFullYear();
+            fetchMembers();
+        });
+    </script>
+</body>
+</html>

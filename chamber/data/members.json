@@ -1,0 +1,65 @@
+[
+    {
+        "name": "Coffee Co.",
+        "address": "001 Coffee Lane, Ndebele, Bulawayo",
+        "phone": "(263) 234-1234",
+        "website": "http://coffee.com",
+        "images": ["coffee.jpeg"],
+        "membershipLevel": 1,
+        "description": "Get your caffeine cup 24/7."
+    },
+    {
+        "name": "Bakery",
+        "address": "002 Bread St, Ndebele, Bulawayo",
+        "phone": "(263) 234-1235",
+        "website": "http://bakery.com",
+        "images": ["bakery.jpeg"],
+        "membershipLevel": 2,
+        "description": "Freshly baked goods every day."
+    },
+    {
+        "name": "Bookstore",
+        "address": "003 Book Ave, Ndebele, Bulawayo",
+        "phone": "(263) 234-1236",
+        "website": "http://bookstore.com",
+        "images": ["bookshop.png"],
+        "membershipLevel": 3,
+        "description": "Your local source for stationery."
+    },
+    {
+        "name": "Gym",
+        "address": "004 Fitness Rd, Ndebele, Bulawayo",
+        "phone": "(263) 234-1237",
+        "website": "http://gym.com",
+        "images": ["gym.jpeg"],
+        "membershipLevel": 2,
+        "description": "Get fit in a friendly environment."
+    },
+    {
+        "name": "Market",
+        "address": "005 Market St, Ndebele, Bulawayo",
+        "phone": "(263) 234-1238",
+        "website": "http://market.com",
+        "images": ["market.jpeg"],
+        "membershipLevel": 1,
+        "description": "Local produce and groceries."
+    },
+    {
+        "name": "Art Gallery",
+        "address": "006 Art St, Ndebele, Bulawayo",
+        "phone": "(263) 234-1239",
+        "website": "http://gallery.com",
+        "images": ["artgallery.jpeg"],
+        "membershipLevel": 3,
+        "description": "Showcasing local artists."
+    },
+    {
+        "name": "Tech Solutions",
+        "address": "135 Tech Rd, Ndebele, Bulawayo",
+        "phone": "(263) 234-1230",
+        "website": "http://tech.com",
+        "images": ["tech.jpeg"],
+        "membershipLevel": 2,
+        "description": "Technology solutions for various gadgets."
+    }
+]
